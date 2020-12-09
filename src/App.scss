@@ -27,25 +27,63 @@ code {
     font-size: 4em;
     width: 35rem;
     margin-bottom: 0;
+    @media screen and (max-width: 660px) {
+      font-size: 3.2em;
+      width: auto;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 2.2em;
+    }
   }
   p {
     font-size: 1.8em;
+    @media screen and (max-width: 660px) {
+      width: auto;
+      font-size: 1.4em;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 1.2em;
+    }
   }
   h3 {
     width: 30rem;
     font-size: 1.7em;
     font-weight: bold;
+    @media screen and (max-width: 660px) {
+      width: auto;
+      font-size: 1.2em;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 1em;
+      width: auto;
+    }
   }
   & > div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 450px) {
+      margin-top: 3rem;
+    }
     & > div {
       & > div {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        img {
+          width: 9rem;
+        }
         img:last-child {
           margin-top: 2rem;
           margin-left: 2rem;
+        }
+      }
+    }
+    & > div:last-child {
+      @media screen and (max-width: 1020px) {
+        & > img {
+          display: none;
         }
       }
     }
